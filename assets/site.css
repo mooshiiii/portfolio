@@ -94,7 +94,21 @@ p { text-wrap: pretty; }
 .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 36px; }
 .card { display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
 .card-figure { margin: 0; background: var(--panel); border-bottom: 1px solid var(--line); }
-.card-figure .diagram { border-radius: 0; }
+.card-figure .diagram { border-radius: 0; cursor: zoom-in; position: relative; }
+.card-figure .diagram:focus-visible { outline-offset: -4px; }
+
+/* Full-screen diagram viewer (assets/zoom.js) */
+.zoom { width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: var(--navy); color: var(--on-navy); }
+.zoom::backdrop { background: rgba(15, 30, 51, 0.6); }
+.zoom[open] { display: flex; flex-direction: column; }
+.zoom-bar { display: flex; align-items: center; gap: 8px; padding: 10px clamp(12px, 3vw, 32px); border-bottom: 1px solid var(--navy-line); }
+.zoom-title { margin: 0 auto 0 0; font-weight: 600; font-size: 16px; color: #FFFFFF; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.zoom-btn { display: inline-grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--ghost-line); border-radius: 8px; background: transparent; color: #FFFFFF; cursor: pointer; }
+.zoom-btn:hover { border-color: var(--copper-light); color: var(--copper-light); }
+.zoom-btn:disabled { opacity: 0.4; cursor: default; }
+.zoom-stage { flex: 1; overflow: auto; overscroll-behavior: contain; display: flex; padding: clamp(12px, 3vw, 40px); }
+.zoom-sheet { margin: auto; flex-shrink: 0; width: calc(min(100%, 1100px) * var(--zoom, 1)); background: var(--panel); border-radius: 10px; padding: clamp(8px, 2vw, 20px); }
+.zoom-sheet svg { display: block; width: 100%; height: auto; }
 .card-body { display: flex; flex-direction: column; gap: 12px; padding: 24px 26px 26px; flex-grow: 1; }
 .card-body p { margin: 0; }
 .card h3 { margin: 0; font-size: 21px; line-height: 1.25; color: var(--navy); }
@@ -183,6 +197,5 @@ p { text-wrap: pretty; }
   .brand-mark { width: 30px; height: 30px; font-size: 12px; }
   .brand-name { font-size: 17px; }
   .nav-links .nav-cv .hint { display: none; }
-  .diagram svg { min-width: 540px; }
-  .card-figure::after { content: "Swipe sideways to see the whole diagram."; display: block; padding: 8px 16px 10px; font-size: 13px; color: var(--muted); }
+  .card-figure::after { content: "Tap the diagram to enlarge it."; display: block; padding: 8px 16px 10px; font-size: 13px; color: var(--muted); }
 }

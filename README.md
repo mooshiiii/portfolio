@@ -2,7 +2,7 @@
 
 Personal portfolio for Graham Reid: network and infrastructure projects, CV and contact.
 
-Plain static HTML and CSS. No build step and no trackers. The only JavaScript is `assets/contact.js`, which builds the "Email me" and "Copy email address" buttons. The address is never shown on the page or written in the HTML, so harvesters can't read it. To change the address, base64-encode it (`printf '%s' 'you@example.com' | base64`) and put the result in the button's `data-email` attribute in `index.html`.
+Plain static HTML and CSS. No build step and no trackers. `assets/zoom.js` opens any project diagram full screen with zoom in/out when it's tapped or clicked. `assets/contact.js` builds the "Email me" and "Copy email address" buttons. The address is never shown on the page or written in the HTML, so harvesters can't read it. To change the address, base64-encode it (`printf '%s' 'you@example.com' | base64`) and put the result in the button's `data-email` attribute in `index.html`.
 
 ## Structure
 
