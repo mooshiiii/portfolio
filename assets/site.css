@@ -86,7 +86,7 @@ p { text-wrap: pretty; }
 
 /* Diagrams: readable on phones by scrolling sideways instead of shrinking */
 .diagram { overflow-x: auto; overscroll-behavior-x: contain; border-radius: 10px; }
-.diagram svg { width: 100%; min-width: 540px; height: auto; }
+.diagram svg { width: 100%; height: auto; }
 
 /* Work */
 .work { padding-top: 88px; padding-bottom: 32px; }
@@ -183,5 +183,6 @@ p { text-wrap: pretty; }
   .brand-mark { width: 30px; height: 30px; font-size: 12px; }
   .brand-name { font-size: 17px; }
   .nav-links .nav-cv .hint { display: none; }
+  .diagram svg { min-width: 540px; }
   .card-figure::after { content: "Swipe sideways to see the whole diagram."; display: block; padding: 8px 16px 10px; font-size: 13px; color: var(--muted); }
 }
