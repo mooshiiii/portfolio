@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graham Reid · Network &amp; Infrastructure</title>
+<meta name="description" content="Graham Reid: networking-trained and CCNA-qualified, designing and running networks, self-hosted services and Microsoft 365 for a Scout district. Open to 2nd-line, NOC and junior network roles.">
+<link rel="canonical" href="https://graham.moshii.co.uk/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Graham Reid · Network & Infrastructure">
+<meta property="og:description" content="Projects behind my CV: a UniFi HQ network design, a Docker compliance platform, a homelab and web apps for Scouting.">
+<meta property="og:url" content="https://graham.moshii.co.uk/">
+<meta name="theme-color" content="#0F1E33">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/IBMPlexSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <nav class="nav wrap" aria-label="Main">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span>Graham Reid</a>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="nav-cv" href="cv/Graham-Reid-CV.pdf">Download CV</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero wrap">
+    <div class="hero-copy">
+      <p class="eyebrow">Network &amp; infrastructure · Paisley, Scotland</p>
+      <h1>I design, build and run networks.</h1>
+      <p class="hero-lede">Networking-trained, CCNA-qualified and now running the network, self-hosted services and Microsoft 365 for a Scout district. These are the projects behind my CV.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View projects</a>
+        <a class="btn btn-ghost" href="cv/Graham-Reid-CV.pdf">Download CV</a>
+      </div>
+      <p class="status"><span class="status-dot" aria-hidden="true"></span>Open to 2nd-line, NOC and junior network roles in Glasgow, Edinburgh or remote</p>
+    </div>
+
+    <div class="term" aria-label="Summary">
+      <p class="term-cmd" aria-hidden="true">$ show graham --summary</p>
+      <dl>
+        <dt>certs</dt><dd>Cisco CCNA (passed during degree)</dd>
+        <dt>kit</dt><dd>UniFi · Docker · Nginx · WireGuard</dd>
+        <dt>admin</dt><dd>Microsoft 365 tenant + users</dd>
+        <dt>builds</dt><dd>PHP + Python web apps</dd>
+        <dt>leads</dt><dd>Charity trustee, District Lead Volunteer</dd>
+        <dt>business</dt><dd>11 years self-employed</dd>
+      </dl>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section wrap" id="projects" aria-labelledby="projects-title">
+    <div class="section-head">
+      <p class="eyebrow">Projects</p>
+      <h2 id="projects-title">Real networks, real users</h2>
+      <p>Everything here is running, or about to be, for a Scout district of volunteers and young people, or on my own homelab.</p>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <figure>
+          <svg viewBox="0 0 640 360" role="img" aria-label="Diagram: a comms rack holding a patch panel, UDM-Pro gateway, 24-port PoE switch and cable management, with the switch feeding cameras, door access, Wi-Fi access points and alarm sensors.">
+            <rect class="dg-rack" x="40" y="36" width="230" height="282" rx="6"/>
+            <rect class="dg-box" x="56" y="58" width="198" height="42" rx="4"/>
+            <g class="dg-port"><rect x="70" y="72" width="10" height="8"/><rect x="86" y="72" width="10" height="8"/><rect x="102" y="72" width="10" height="8"/><rect x="118" y="72" width="10" height="8"/></g>
+            <text class="dg-s" x="142" y="84">Patch panel</text>
+            <rect class="dg-box-navy" x="56" y="114" width="198" height="42" rx="4"/>
+            <circle class="dg-led" cx="74" cy="135" r="5"/>
+            <text class="dg-w" x="88" y="141">UDM-Pro</text>
+            <rect class="dg-box-accent" x="56" y="170" width="198" height="42" rx="4"/>
+            <text class="dg-t" x="70" y="197">24-port PoE switch</text>
+            <rect class="dg-box" x="56" y="226" width="198" height="42" rx="4"/>
+            <text class="dg-s" x="70" y="252">Cable management</text>
+            <text class="dg-s" x="155" y="344" text-anchor="middle">Comms rack · Cat6A F/UTP</text>
+
+            <path class="dg-line-accent" d="M254 191 H320 V69 H380"/>
+            <path class="dg-line-accent" d="M320 191 V139 H380"/>
+            <path class="dg-line-accent" d="M320 191 V209 H380"/>
+            <path class="dg-line-accent" d="M320 191 V279 H380"/>
+            <rect class="dg-box" x="380" y="44" width="230" height="50" rx="6"/>
+            <text class="dg-t" x="396" y="66">5 × 4K cameras</text><text class="dg-s" x="396" y="85">2 outdoor · 3 indoor</text>
+            <rect class="dg-box" x="380" y="114" width="230" height="50" rx="6"/>
+            <text class="dg-t" x="396" y="136">2 × door access</text><text class="dg-s" x="396" y="155">readers · mag locks</text>
+            <rect class="dg-box" x="380" y="184" width="230" height="50" rx="6"/>
+            <text class="dg-t" x="396" y="206">Wi-Fi access points</text><text class="dg-s" x="396" y="225">managed from one console</text>
+            <rect class="dg-box" x="380" y="254" width="230" height="50" rx="6"/>
+            <text class="dg-t" x="396" y="276">Alarm sensors</text><text class="dg-s" x="396" y="295">smoke · motion · entry</text>
+            <text class="dg-s" x="380" y="340">PoE load ≈ 250–300 W</text>
+          </svg>
+        </figure>
+        <div class="card-body">
+          <ul class="tags" aria-label="Technologies"><li>UniFi</li><li>PoE</li><li>Cat6A</li><li>Access control</li></ul>
+          <h3>Scout HQ network and security design</h3>
+          <p>A rack-based UniFi network for a district HQ: Cat6A structured cabling, 24-port PoE switching, five 4K cameras and two-door access control, costed at about £4,640.</p>
+          <a class="card-link" href="#case-study">Read the case study →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <figure>
+          <svg viewBox="0 0 640 360" role="img" aria-label="Diagram: membership exports go into a Docker web app, which produces reports for 12 units plus a district summary, sends one summary email per volunteer, and keeps a job log with retention clean-up.">
+            <defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="dg-arrow" d="M0 0 L10 5 L0 10 z"/></marker></defs>
+            <rect class="dg-box" x="24" y="64" width="180" height="72" rx="6"/>
+            <text class="dg-t" x="40" y="94">Membership</text><text class="dg-t" x="40" y="116">export</text>
+            <rect class="dg-box-navy" x="232" y="64" width="176" height="72" rx="6"/>
+            <text class="dg-w" x="248" y="94">Docker web app</text><text class="dg-ws" x="248" y="118">Python · web UI</text>
+            <rect class="dg-box-accent" x="436" y="64" width="180" height="72" rx="6"/>
+            <text class="dg-t" x="452" y="94">Compliance</text><text class="dg-s" x="452" y="118">12 units + district</text>
+            <path class="dg-line-accent" d="M204 100 H228" marker-end="url(#ar2)"/>
+            <path class="dg-line-accent" d="M408 100 H432" marker-end="url(#ar2)"/>
+            <rect class="dg-box" x="232" y="226" width="176" height="72" rx="6"/>
+            <text class="dg-t" x="248" y="256">Volunteer emails</text><text class="dg-s" x="248" y="280">one summary each</text>
+            <rect class="dg-box" x="24" y="226" width="180" height="72" rx="6"/>
+            <text class="dg-t" x="40" y="256">Job log</text><text class="dg-s" x="40" y="280">retention · checks</text>
+            <rect class="dg-box" x="436" y="226" width="180" height="72" rx="6"/>
+            <text class="dg-t" x="452" y="256">District policy</text><text class="dg-s" x="452" y="280">approve · suspend</text>
+            <path class="dg-line-accent" d="M320 136 V222" marker-end="url(#ar2)"/>
+            <path class="dg-line" d="M270 136 V180 H114 V222" marker-end="url(#ar2)"/>
+            <path class="dg-line-accent" d="M526 136 V222" marker-end="url(#ar2)"/>
+          </svg>
+        </figure>
+        <div class="card-body">
+          <ul class="tags" aria-label="Technologies"><li>Docker</li><li>Python</li><li>Automation</li></ul>
+          <h3>Compliance reporting platform</h3>
+          <p>A Docker-containerised web app that turns membership exports into compliance reports for 12 groups and units, and emails each volunteer one accurate summary. It underpins the district's compliance policy.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <figure>
+          <svg viewBox="0 0 640 360" role="img" aria-label="Diagram: 2.3 gigabit full fibre over PPPoE into a UniFi UDR7 gateway, which serves a main LAN with a NAS running Docker and Nginx Proxy Manager, an isolated IoT VLAN with its own SSID, and a WireGuard split-tunnel VPN for selected devices.">
+            <rect class="dg-box" x="220" y="16" width="200" height="56" rx="6"/>
+            <text class="dg-t" x="236" y="40">Internet</text><text class="dg-s" x="236" y="60">2.3 Gbps fibre · PPPoE</text>
+            <path class="dg-line-accent" d="M320 72 V104"/>
+            <rect class="dg-box-navy" x="210" y="104" width="220" height="56" rx="6"/>
+            <text class="dg-w" x="226" y="128">UniFi gateway</text><text class="dg-ws" x="226" y="148">UDR7 · PoE switching</text>
+            <path class="dg-line-accent" d="M260 160 V186 H120 V206"/>
+            <path class="dg-dash" d="M320 160 V206"/>
+            <path class="dg-line-accent" d="M380 160 V186 H520 V206"/>
+            <rect class="dg-box" x="24" y="206" width="192" height="56" rx="6"/>
+            <text class="dg-t" x="40" y="230">Main LAN</text><text class="dg-s" x="40" y="250">PCs · APs · NAS</text>
+            <rect class="dg-box-accent" x="224" y="206" width="192" height="56" rx="6"/>
+            <text class="dg-t" x="240" y="230">WireGuard VPN</text><text class="dg-s" x="240" y="250">split tunnel</text>
+            <rect class="dg-box" x="424" y="206" width="192" height="56" rx="6"/>
+            <text class="dg-t" x="440" y="230">IoT VLAN</text><text class="dg-s" x="440" y="250">own SSID · isolated</text>
+            <path class="dg-line" d="M120 262 V286"/>
+            <rect class="dg-box" x="24" y="286" width="300" height="56" rx="6"/>
+            <text class="dg-t" x="40" y="310">NAS · Docker Compose</text><text class="dg-s" x="40" y="330">Nginx Proxy Manager · HTTPS</text>
+          </svg>
+        </figure>
+        <div class="card-body">
+          <ul class="tags" aria-label="Technologies"><li>VLANs</li><li>Nginx</li><li>WireGuard</li><li>Docker</li></ul>
+          <h3>Homelab and self-hosted services</h3>
+          <p>A UniFi gateway and PoE switching on 2.3 Gbps full fibre, IoT isolated on its own VLAN, services behind Nginx Proxy Manager with HTTPS, and a WireGuard split-tunnel VPN.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <figure>
+          <svg viewBox="0 0 640 360" role="img" aria-label="Four web applications: a King's Scout Award portal in PHP, PAGGS Hub in Python, the district website in PHP, and a Lapwing Lodge booking prototype in PHP.">
+            <rect class="dg-box-accent" x="32" y="40" width="276" height="128" rx="8"/>
+            <text class="dg-s" x="290" y="68" text-anchor="end" style="fill: var(--copper)">PHP</text>
+            <text class="dg-t" x="52" y="112">King's Scout Award portal</text><text class="dg-s" x="52" y="138">progress · logbook · sign-offs</text>
+            <rect class="dg-box" x="332" y="40" width="276" height="128" rx="8"/>
+            <text class="dg-s" x="590" y="68" text-anchor="end" style="fill: var(--copper)">Python</text>
+            <text class="dg-t" x="352" y="112">PAGGS Hub</text><text class="dg-s" x="352" y="138">registration · welfare data</text>
+            <rect class="dg-box" x="32" y="192" width="276" height="128" rx="8"/>
+            <text class="dg-s" x="290" y="220" text-anchor="end" style="fill: var(--copper)">PHP</text>
+            <text class="dg-t" x="52" y="264">District website</text><text class="dg-s" x="52" y="290">rebuild in progress</text>
+            <rect class="dg-box" x="332" y="192" width="276" height="128" rx="8"/>
+            <text class="dg-s" x="590" y="220" text-anchor="end" style="fill: var(--copper)">PHP</text>
+            <text class="dg-t" x="352" y="264">Lapwing Lodge booking</text><text class="dg-s" x="352" y="290">prototype</text>
+          </svg>
+        </figure>
+        <div class="card-body">
+          <ul class="tags" aria-label="Technologies"><li>PHP</li><li>Python</li><li>Git</li></ul>
+          <h3>Web applications for Scouting</h3>
+          <p>PHP and Python apps, including a King's Scout Award portal for progress, logbooks and sign-offs, and PAGGS Hub, a self-hosted registration and welfare-data system for a twin-town camp.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section wrap" id="case-study" aria-labelledby="case-title">
+    <div class="case">
+      <div class="case-copy">
+        <p class="eyebrow">Case study</p>
+        <h2 id="case-title">Inside the HQ network design</h2>
+        <p>The district HQ needed reliable Wi-Fi, CCTV and controlled door access, on a volunteer budget and maintainable by volunteers. I specified a rack-based UniFi system so everything is managed from one console.</p>
+        <h3>Key decisions</h3>
+        <ul>
+          <li><strong>Rack over wall-mount.</strong> I compared an all-in-one wall unit with a UDM-Pro, separate PoE switch and patch panel, and chose the rack for clean cabling and room to grow.</li>
+          <li><strong>Power budget first.</strong> I estimated a 250–300 W PoE load across cameras, door hardware and sensors, and sized the switching to match before buying anything.</li>
+          <li><strong>Cable once.</strong> Cat6A F/UTP LSZH supports 10 Gbps at 100 m, so the building shouldn't need recabling for a decade.</li>
+        </ul>
+        <p>Equipment is on order. Installation is next, and I'll add photos and lessons learned here once it's in.</p>
+      </div>
+      <div class="spec">
+        <table>
+          <caption>Spec sheet</caption>
+          <tbody>
+            <tr><th scope="row">Gateway</th><td>UDM-Pro</td></tr>
+            <tr><th scope="row">Switching</th><td>24-port PoE switch, patch panel, rack</td></tr>
+            <tr><th scope="row">Cabling</th><td>Cat6A F/UTP LSZH</td></tr>
+            <tr><th scope="row">Cameras</th><td>2 outdoor turrets, 3 indoor domes, all 4K</td></tr>
+            <tr><th scope="row">Access</th><td>2 doors, readers and magnetic locks</td></tr>
+            <tr><th scope="row">Sensors</th><td>Smoke, motion, entry, PoE siren</td></tr>
+            <tr><th scope="row">PoE load</th><td>250–300 W estimated</td></tr>
+            <tr><th scope="row">Budget</th><td>About £4,640 ex VAT</td></tr>
+            <tr><th scope="row">Status</th><td>Equipment ordered; install to follow</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="about-wrap" id="about">
+    <section class="about wrap" aria-labelledby="about-title">
+      <div class="about-copy">
+        <p class="eyebrow">About</p>
+        <h2 id="about-title">From the driver's seat to the server rack</h2>
+        <p>I studied Computer Networking with Systems Support at Glasgow Caledonian University and passed the Cisco CCNA along the way. Since then I've run my own business for over a decade, and the networking never stopped. In Scouting I went from Explorer Scout Leader to District Network Scout Commissioner, trustee and District Lead Volunteer, and became the person who builds and fixes the district's tech.</p>
+        <p>Now I'm making it my job. I'm looking for a 2nd-line, NOC or junior network role, on the way to becoming a network architect.</p>
+      </div>
+      <ol class="timeline" reversed>
+        <li><time datetime="2026">2026</time><span>Transport Coordinator, Blair Atholl International Jamborette: 523 participants, 34 contingents</span></li>
+        <li><time datetime="2024-08">2024</time><span>District Lead Volunteer, Paisley &amp; District Scouts</span></li>
+        <li><time datetime="2021">c.2021</time><span>Joined the District Trustee Board</span></li>
+        <li><time datetime="2015-02">2015</time><span>Started my own private hire business</span></li>
+        <li><time datetime="2012-08">2012</time><span>CAD Draughtsman, Tec-Source EECS, on two hybrid ferries</span></li>
+        <li><time datetime="2007">2007</time><span>Computer Networking at GCU; passed the Cisco CCNA</span></li>
+      </ol>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="contact wrap">
+    <h2>Got a role that fits? Let's talk.</h2>
+    <div class="contact-actions">
+      <a class="btn btn-primary" href="mailto:graham@moshii.co.uk">graham@moshii.co.uk</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/moshii/">LinkedIn</a>
+      <a class="btn btn-ghost" href="cv/Graham-Reid-CV.pdf">Download CV (PDF)</a>
+    </div>
+    <p class="colophon">© 2026 Graham Reid · graham.moshii.co.uk</p>
+  </div>
+</footer>
+</body>
+</html>
