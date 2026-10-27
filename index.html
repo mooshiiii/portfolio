@@ -64,139 +64,142 @@
   <section class="work wrap" id="work" aria-labelledby="work-title">
     <h2 id="work-title">What I've built and run</h2>
 
-    <article class="project">
-      <div class="project-text">
-        <h3>Compliance reporting platform</h3>
-        <p class="status">Running · Paisley &amp; District Scouts</p>
-        <p>Every volunteer in the district has training and checks to keep in date. This web app takes the exports from the Scouts' membership system and turns them into a compliance report for each of the district's 12 groups and units, plus a district summary. Each volunteer gets one email listing exactly what they still need to do, even if they hold several roles.</p>
-        <p>The district now approves new appointments only when everyone involved is compliant, and these reports are how that's checked.</p>
-        <ul class="points">
-          <li>Runs in Docker on my NAS, adapted from an open-source base.</li>
-          <li>I fixed its spreadsheet template, formula and volume-mount faults, rebuilt the email logic for multi-role volunteers, and added job logging, data-retention clean-up and an input diagnostics page.</li>
-        </ul>
-        <p class="stack">Docker · Python · web UI · automated email</p>
-      </div>
-      <figure class="project-figure">
-        <!-- Slot: replace or follow with a redacted dashboard screenshot when available. -->
-        <div class="diagram" tabindex="0" role="group" aria-label="Compliance platform diagram, scrollable on small screens">
-          <svg viewBox="0 0 640 360" role="img" aria-label="Membership exports go into a Docker web app, which produces reports for 12 units plus a district summary, sends one summary email per volunteer, and keeps a job log with retention clean-up.">
-            <defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="dg-arrow" d="M0 0 L10 5 L0 10 z"/></marker></defs>
-            <rect class="dg-box" x="24" y="64" width="180" height="72" rx="6"/>
-            <text class="dg-t" x="40" y="94">Membership</text><text class="dg-t" x="40" y="116">export</text>
-            <rect class="dg-box-navy" x="232" y="64" width="176" height="72" rx="6"/>
-            <text class="dg-w" x="248" y="94">Docker web app</text><text class="dg-ws" x="248" y="118">Python · web UI</text>
-            <rect class="dg-box-accent" x="436" y="64" width="180" height="72" rx="6"/>
-            <text class="dg-t" x="452" y="94">Compliance</text><text class="dg-s" x="452" y="118">12 units + district</text>
-            <path class="dg-line-accent" d="M204 100 H228" marker-end="url(#ar2)"/>
-            <path class="dg-line-accent" d="M408 100 H432" marker-end="url(#ar2)"/>
-            <rect class="dg-box" x="232" y="226" width="176" height="72" rx="6"/>
-            <text class="dg-t" x="248" y="256">Volunteer emails</text><text class="dg-s" x="248" y="280">one summary each</text>
-            <rect class="dg-box" x="24" y="226" width="180" height="72" rx="6"/>
-            <text class="dg-t" x="40" y="256">Job log</text><text class="dg-s" x="40" y="280">retention · checks</text>
-            <rect class="dg-box" x="436" y="226" width="180" height="72" rx="6"/>
-            <text class="dg-t" x="452" y="256">District policy</text><text class="dg-s" x="452" y="280">approve · suspend</text>
-            <path class="dg-line-accent" d="M320 136 V222" marker-end="url(#ar2)"/>
-            <path class="dg-line" d="M270 136 V180 H114 V222" marker-end="url(#ar2)"/>
-            <path class="dg-line-accent" d="M526 136 V222" marker-end="url(#ar2)"/>
-          </svg>
+    <div class="cards">
+      <article class="card">
+        <figure class="card-figure">
+          <div class="diagram" tabindex="0" role="group" aria-label="Compliance platform diagram, scrollable on small screens">
+            <svg viewBox="0 0 640 360" role="img" aria-label="Membership exports go into a Docker web app, which produces reports for 12 units plus a district summary, sends one summary email per volunteer, and keeps a job log with retention clean-up.">
+              <defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="dg-arrow" d="M0 0 L10 5 L0 10 z"/></marker></defs>
+              <rect class="dg-box" x="24" y="64" width="180" height="72" rx="6"/>
+              <text class="dg-t" x="40" y="94">Membership</text><text class="dg-t" x="40" y="116">export</text>
+              <rect class="dg-box-navy" x="232" y="64" width="176" height="72" rx="6"/>
+              <text class="dg-w" x="248" y="94">Docker web app</text><text class="dg-ws" x="248" y="118">Python · web UI</text>
+              <rect class="dg-box-accent" x="436" y="64" width="180" height="72" rx="6"/>
+              <text class="dg-t" x="452" y="94">Compliance</text><text class="dg-s" x="452" y="118">12 units + district</text>
+              <path class="dg-line-accent" d="M204 100 H228" marker-end="url(#ar2)"/>
+              <path class="dg-line-accent" d="M408 100 H432" marker-end="url(#ar2)"/>
+              <rect class="dg-box" x="232" y="226" width="176" height="72" rx="6"/>
+              <text class="dg-t" x="248" y="256">Volunteer emails</text><text class="dg-s" x="248" y="280">one summary each</text>
+              <rect class="dg-box" x="24" y="226" width="180" height="72" rx="6"/>
+              <text class="dg-t" x="40" y="256">Job log</text><text class="dg-s" x="40" y="280">retention · checks</text>
+              <rect class="dg-box" x="436" y="226" width="180" height="72" rx="6"/>
+              <text class="dg-t" x="452" y="256">District policy</text><text class="dg-s" x="452" y="280">approve · suspend</text>
+              <path class="dg-line-accent" d="M320 136 V222" marker-end="url(#ar2)"/>
+              <path class="dg-line" d="M270 136 V180 H114 V222" marker-end="url(#ar2)"/>
+              <path class="dg-line-accent" d="M526 136 V222" marker-end="url(#ar2)"/>
+            </svg>
+          </div>
+          <!-- Slot: a redacted dashboard screenshot can replace or follow this diagram. -->
+        </figure>
+        <div class="card-body">
+          <ul class="tags" aria-label="Technologies"><li>Docker</li><li>Python</li><li>Automation</li></ul>
+          <h3>Compliance reporting platform</h3>
+          <p class="status">Running · Paisley &amp; District Scouts</p>
+          <p>Turns the Scouts' membership exports into compliance reports for the district's 12 groups and units, and emails every volunteer one list of what they still need to do. New appointments are only approved when everyone involved is compliant, and these reports are how that's checked.</p>
         </div>
-        <figcaption>How the data flows.</figcaption>
-      </figure>
-    </article>
+      </article>
 
-    <article class="project">
-      <div class="project-text">
-        <h3>Home network and self-hosted services</h3>
-        <p class="status">Running · home</p>
-        <p>It's where I learn things before I use them for the Scouts.</p>
-        <!-- Slot: add a UniFi topology screenshot or a sanitised docker-compose excerpt here. -->
-        <dl class="facts facts-compact">
-          <div><dt>Connection</dt><dd>2.3 Gbps full fibre over PPPoE</dd></div>
-          <div><dt>Gateway</dt><dd>UniFi UDR7 with managed PoE switching and two access points</dd></div>
-          <div><dt>Segmentation</dt><dd>IoT devices on their own VLAN and SSID, isolated from the main LAN</dd></div>
-          <div><dt>Services</dt><dd>Web apps and media services in Docker Compose on a NAS, published through Nginx Proxy Manager with HTTPS certificates</dd></div>
-          <div><dt>VPN</dt><dd>WireGuard, split-tunnelled so only selected devices use it</dd></div>
-        </dl>
-      </div>
-    <figure class="project-figure">
-      <div class="diagram" tabindex="0" role="group" aria-label="Home network diagram, scrollable on small screens">
-      <svg viewBox="0 0 640 360" role="img" aria-label="My home network: 2.3 gigabit full fibre over PPPoE into a UniFi UDR7 gateway, which serves a main LAN with a NAS running Docker and Nginx Proxy Manager, an isolated IoT VLAN with its own SSID, and a WireGuard split-tunnel VPN for selected devices.">
-        <rect class="dg-box" x="220" y="16" width="200" height="56" rx="6"/>
-        <text class="dg-t" x="236" y="40">Internet</text><text class="dg-s" x="236" y="60">2.3 Gbps fibre · PPPoE</text>
-        <path class="dg-line-accent" d="M320 72 V104"/>
-        <rect class="dg-box-navy" x="210" y="104" width="220" height="56" rx="6"/>
-        <text class="dg-w" x="226" y="128">UniFi gateway</text><text class="dg-ws" x="226" y="148">UDR7 · PoE switching</text>
-        <path class="dg-line-accent" d="M260 160 V186 H120 V206"/>
-        <path class="dg-line-accent" d="M320 160 V206"/>
-        <path class="dg-line-accent" d="M380 160 V186 H520 V206"/>
-        <rect class="dg-box" x="24" y="206" width="192" height="56" rx="6"/>
-        <text class="dg-t" x="40" y="230">Main LAN</text><text class="dg-s" x="40" y="250">PCs · APs · NAS</text>
-        <rect class="dg-box-accent" x="224" y="206" width="192" height="56" rx="6"/>
-        <text class="dg-t" x="240" y="230">WireGuard VPN</text><text class="dg-s" x="240" y="250">split tunnel</text>
-        <rect class="dg-box" x="424" y="206" width="192" height="56" rx="6"/>
-        <text class="dg-t" x="440" y="230">IoT VLAN</text><text class="dg-s" x="440" y="250">own SSID · isolated</text>
-        <path class="dg-line" d="M120 262 V286"/>
-        <rect class="dg-box" x="24" y="286" width="300" height="56" rx="6"/>
-        <text class="dg-t" x="40" y="310">NAS · Docker Compose</text><text class="dg-s" x="40" y="330">Nginx Proxy Manager · HTTPS</text>
-      </svg>
-      </div>
-      <figcaption>My home network as it runs today. Addresses and network names left out on purpose.</figcaption>
-    </figure>
-    </article>
-
-    <article class="project">
-      <div class="project-text">
-        <h3>Scout HQ network and security design</h3>
-        <p class="status">Designed and costed · installation next</p>
-        <p>A rack-based UniFi network for the district headquarters, bringing Wi-Fi, five 4K cameras, two-door access control and alarm sensors onto one system that volunteers can manage from one app.</p>
-        <p><a class="text-link" href="#case-study">Read how I designed it</a></p>
-      </div>
-      <figure class="project-figure">
-        <div class="diagram" tabindex="0" role="group" aria-label="HQ rack diagram, scrollable on small screens">
-          <svg viewBox="0 0 640 360" role="img" aria-label="A comms rack holding a patch panel, UDM-Pro gateway, 24-port PoE switch and cable management, with the switch feeding cameras, door access, Wi-Fi access points and alarm sensors.">
-            <rect class="dg-rack" x="40" y="36" width="230" height="282" rx="6"/>
-            <rect class="dg-box" x="56" y="58" width="198" height="42" rx="4"/>
-            <g class="dg-port"><rect x="70" y="72" width="10" height="8"/><rect x="86" y="72" width="10" height="8"/><rect x="102" y="72" width="10" height="8"/><rect x="118" y="72" width="10" height="8"/></g>
-            <text class="dg-s" x="142" y="84">Patch panel</text>
-            <rect class="dg-box-navy" x="56" y="114" width="198" height="42" rx="4"/>
-            <circle class="dg-led" cx="74" cy="135" r="5"/>
-            <text class="dg-w" x="88" y="141">UDM-Pro</text>
-            <rect class="dg-box-accent" x="56" y="170" width="198" height="42" rx="4"/>
-            <text class="dg-t" x="70" y="197">24-port PoE switch</text>
-            <rect class="dg-box" x="56" y="226" width="198" height="42" rx="4"/>
-            <text class="dg-s" x="70" y="252">Cable management</text>
-            <text class="dg-s" x="155" y="344" text-anchor="middle">Comms rack · Cat6A F/UTP</text>
-            <path class="dg-line-accent" d="M254 191 H320 V69 H380"/>
-            <path class="dg-line-accent" d="M320 191 V139 H380"/>
-            <path class="dg-line-accent" d="M320 191 V209 H380"/>
-            <path class="dg-line-accent" d="M320 191 V279 H380"/>
-            <rect class="dg-box" x="380" y="44" width="230" height="50" rx="6"/>
-            <text class="dg-t" x="396" y="66">5 × 4K cameras</text><text class="dg-s" x="396" y="85">2 outdoor · 3 indoor</text>
-            <rect class="dg-box" x="380" y="114" width="230" height="50" rx="6"/>
-            <text class="dg-t" x="396" y="136">2 × door access</text><text class="dg-s" x="396" y="155">readers · mag locks</text>
-            <rect class="dg-box" x="380" y="184" width="230" height="50" rx="6"/>
-            <text class="dg-t" x="396" y="206">Wi-Fi access points</text><text class="dg-s" x="396" y="225">managed from one console</text>
-            <rect class="dg-box" x="380" y="254" width="230" height="50" rx="6"/>
-            <text class="dg-t" x="396" y="276">Alarm sensors</text><text class="dg-s" x="396" y="295">smoke · motion · entry</text>
-          </svg>
+      <article class="card">
+        <figure class="card-figure">
+          <div class="diagram" tabindex="0" role="group" aria-label="Home network diagram, scrollable on small screens">
+            <svg viewBox="0 0 640 360" role="img" aria-label="My home network: 2.3 gigabit full fibre over PPPoE into a UniFi UDR7 gateway, which serves a main LAN with a NAS running Docker and Nginx Proxy Manager, an isolated IoT VLAN with its own SSID, and a WireGuard split-tunnel VPN for selected devices.">
+              <rect class="dg-box" x="220" y="16" width="200" height="56" rx="6"/>
+              <text class="dg-t" x="236" y="40">Internet</text><text class="dg-s" x="236" y="60">2.3 Gbps fibre · PPPoE</text>
+              <path class="dg-line-accent" d="M320 72 V104"/>
+              <rect class="dg-box-navy" x="210" y="104" width="220" height="56" rx="6"/>
+              <text class="dg-w" x="226" y="128">UniFi gateway</text><text class="dg-ws" x="226" y="148">UDR7 · PoE switching</text>
+              <path class="dg-line-accent" d="M260 160 V186 H120 V206"/>
+              <path class="dg-line-accent" d="M320 160 V206"/>
+              <path class="dg-line-accent" d="M380 160 V186 H520 V206"/>
+              <rect class="dg-box" x="24" y="206" width="192" height="56" rx="6"/>
+              <text class="dg-t" x="40" y="230">Main LAN</text><text class="dg-s" x="40" y="250">PCs · APs · NAS</text>
+              <rect class="dg-box-accent" x="224" y="206" width="192" height="56" rx="6"/>
+              <text class="dg-t" x="240" y="230">WireGuard VPN</text><text class="dg-s" x="240" y="250">split tunnel</text>
+              <rect class="dg-box" x="424" y="206" width="192" height="56" rx="6"/>
+              <text class="dg-t" x="440" y="230">IoT VLAN</text><text class="dg-s" x="440" y="250">own SSID · isolated</text>
+              <path class="dg-line" d="M120 262 V286"/>
+              <rect class="dg-box" x="24" y="286" width="300" height="56" rx="6"/>
+              <text class="dg-t" x="40" y="310">NAS · Docker Compose</text><text class="dg-s" x="40" y="330">Nginx Proxy Manager · HTTPS</text>
+            </svg>
+          </div>
+          <!-- Slot: a UniFi topology screenshot can replace or follow this diagram. -->
+        </figure>
+        <div class="card-body">
+          <ul class="tags" aria-label="Technologies"><li>UniFi</li><li>VLANs</li><li>Docker</li><li>WireGuard</li></ul>
+          <h3>Home network and self-hosted services</h3>
+          <p class="status">Running · home</p>
+          <p>A UniFi UDR7 on 2.3 Gbps full fibre, with IoT devices isolated on their own VLAN and SSID. Services run in Docker Compose on a NAS behind Nginx Proxy Manager with HTTPS, and a WireGuard split tunnel covers selected devices. It's where I learn things before I use them for the Scouts.</p>
         </div>
-        <figcaption>The rack and what it feeds.</figcaption>
-      </figure>
-    </article>
+      </article>
 
-    <article class="project">
-      <div class="project-text">
-        <h3>Web applications for Scouting</h3>
-        <p class="status">In use and in progress</p>
-        <p>Small PHP and Python apps for the district's admin, kept in Git.</p>
-      </div>
-      <dl class="facts">
-        <div><dt>King's Scout Award portal</dt><dd>Helps Explorer and Network members track their progress towards Scouting's top youth award, build their logbook, collect sign-offs and plan expeditions. PHP.</dd></div>
-        <div><dt>PAGGS Hub</dt><dd>Self-hosted registration and welfare data for a twin-town camp held every three years. Python.</dd></div>
-        <div><dt>District website</dt><dd>Rebuilding the Paisley &amp; District Scouts site. PHP, in progress.</dd></div>
-        <div><dt>Lapwing Lodge booking</dt><dd>A prototype booking system for an outdoor Scout centre. PHP.</dd></div>
-      </dl>
-    </article>
+      <article class="card">
+        <figure class="card-figure">
+          <div class="diagram" tabindex="0" role="group" aria-label="HQ rack diagram, scrollable on small screens">
+            <svg viewBox="0 0 640 360" role="img" aria-label="A comms rack holding a patch panel, UDM-Pro gateway, 24-port PoE switch and cable management, with the switch feeding cameras, door access, Wi-Fi access points and alarm sensors.">
+              <rect class="dg-rack" x="40" y="36" width="230" height="282" rx="6"/>
+              <rect class="dg-box" x="56" y="58" width="198" height="42" rx="4"/>
+              <g class="dg-port"><rect x="70" y="72" width="10" height="8"/><rect x="86" y="72" width="10" height="8"/><rect x="102" y="72" width="10" height="8"/><rect x="118" y="72" width="10" height="8"/></g>
+              <text class="dg-s" x="142" y="84">Patch panel</text>
+              <rect class="dg-box-navy" x="56" y="114" width="198" height="42" rx="4"/>
+              <circle class="dg-led" cx="74" cy="135" r="5"/>
+              <text class="dg-w" x="88" y="141">UDM-Pro</text>
+              <rect class="dg-box-accent" x="56" y="170" width="198" height="42" rx="4"/>
+              <text class="dg-t" x="70" y="197">24-port PoE switch</text>
+              <rect class="dg-box" x="56" y="226" width="198" height="42" rx="4"/>
+              <text class="dg-s" x="70" y="252">Cable management</text>
+              <text class="dg-s" x="155" y="344" text-anchor="middle">Comms rack · Cat6A F/UTP</text>
+              <path class="dg-line-accent" d="M254 191 H320 V69 H380"/>
+              <path class="dg-line-accent" d="M320 191 V139 H380"/>
+              <path class="dg-line-accent" d="M320 191 V209 H380"/>
+              <path class="dg-line-accent" d="M320 191 V279 H380"/>
+              <rect class="dg-box" x="380" y="44" width="230" height="50" rx="6"/>
+              <text class="dg-t" x="396" y="66">5 × 4K cameras</text><text class="dg-s" x="396" y="85">2 outdoor · 3 indoor</text>
+              <rect class="dg-box" x="380" y="114" width="230" height="50" rx="6"/>
+              <text class="dg-t" x="396" y="136">2 × door access</text><text class="dg-s" x="396" y="155">readers · mag locks</text>
+              <rect class="dg-box" x="380" y="184" width="230" height="50" rx="6"/>
+              <text class="dg-t" x="396" y="206">Wi-Fi access points</text><text class="dg-s" x="396" y="225">managed from one console</text>
+              <rect class="dg-box" x="380" y="254" width="230" height="50" rx="6"/>
+              <text class="dg-t" x="396" y="276">Alarm sensors</text><text class="dg-s" x="396" y="295">smoke · motion · entry</text>
+            </svg>
+          </div>
+        </figure>
+        <div class="card-body">
+          <ul class="tags" aria-label="Technologies"><li>UniFi</li><li>PoE</li><li>Cat6A</li><li>Access control</li></ul>
+          <h3>Scout HQ network and security design</h3>
+          <p class="status">Designed and costed · installation next</p>
+          <p>A rack-based UniFi network for the district headquarters, bringing Wi-Fi, five 4K cameras, two-door access control and alarm sensors onto one system that volunteers can manage from one app.</p>
+          <a class="card-link" href="#case-study">Read how I designed it</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <figure class="card-figure">
+          <div class="diagram" tabindex="0" role="group" aria-label="Web applications overview, scrollable on small screens">
+            <svg viewBox="0 0 640 360" role="img" aria-label="Four web applications: a King's Scout Award portal in PHP, PAGGS Hub in Python, the district website in PHP, and a Lapwing Lodge booking prototype in PHP.">
+              <rect class="dg-box-accent" x="32" y="40" width="276" height="128" rx="8"/>
+              <text class="dg-s dg-lang" x="290" y="68" text-anchor="end">PHP</text>
+              <text class="dg-t" x="52" y="112">King's Scout Award portal</text><text class="dg-s" x="52" y="138">progress · logbook · sign-offs</text>
+              <rect class="dg-box" x="332" y="40" width="276" height="128" rx="8"/>
+              <text class="dg-s dg-lang" x="590" y="68" text-anchor="end">Python</text>
+              <text class="dg-t" x="352" y="112">PAGGS Hub</text><text class="dg-s" x="352" y="138">registration · welfare data</text>
+              <rect class="dg-box" x="32" y="192" width="276" height="128" rx="8"/>
+              <text class="dg-s dg-lang" x="290" y="220" text-anchor="end">PHP</text>
+              <text class="dg-t" x="52" y="264">District website</text><text class="dg-s" x="52" y="290">rebuild in progress</text>
+              <rect class="dg-box" x="332" y="192" width="276" height="128" rx="8"/>
+              <text class="dg-s dg-lang" x="590" y="220" text-anchor="end">PHP</text>
+              <text class="dg-t" x="352" y="264">Lapwing Lodge booking</text><text class="dg-s" x="352" y="290">prototype</text>
+            </svg>
+          </div>
+          <!-- Slot: app screenshots can replace this overview. -->
+        </figure>
+        <div class="card-body">
+          <ul class="tags" aria-label="Technologies"><li>PHP</li><li>Python</li><li>Git</li></ul>
+          <h3>Web applications for Scouting</h3>
+          <p class="status">In use and in progress</p>
+          <p>Small PHP and Python apps for the district's admin: a King's Scout Award portal for progress, logbooks and sign-offs, PAGGS Hub for registration and welfare data at a twin-town camp, the new district website, and a booking prototype for Lapwing Lodge.</p>
+        </div>
+      </article>
+    </div>
   </section>
 
   <section class="case wrap" id="case-study" aria-labelledby="case-title">

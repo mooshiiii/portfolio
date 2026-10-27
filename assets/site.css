@@ -91,27 +91,18 @@ p { text-wrap: pretty; }
 /* Work */
 .work { padding-top: 88px; padding-bottom: 32px; }
 .work > h2, .about h2, .case h2 { margin: 0 0 8px; font-size: clamp(28px, 3.6vw, 38px); line-height: 1.15; letter-spacing: -0.015em; color: var(--navy); }
-.project { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; padding: 48px 0; border-top: 1px solid var(--line); align-items: start; }
-.work > h2 + .project { margin-top: 32px; }
-.project h3 { margin: 0; font-size: 21px; line-height: 1.25; color: var(--navy); }
-.project-text { display: flex; flex-direction: column; gap: 14px; }
-.project-text p { margin: 0; max-width: 68ch; }
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 36px; }
+.card { display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.card-figure { margin: 0; background: var(--panel); border-bottom: 1px solid var(--line); }
+.card-figure .diagram { border-radius: 0; }
+.card-body { display: flex; flex-direction: column; gap: 12px; padding: 24px 26px 26px; flex-grow: 1; }
+.card-body p { margin: 0; }
+.card h3 { margin: 0; font-size: 21px; line-height: 1.25; color: var(--navy); }
 .status { font-size: 14px; font-weight: 600; color: var(--copper); }
-.points { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: var(--muted); font-size: 15px; }
-.stack { font-size: 14px; color: var(--muted); }
-.project-figure { margin: 0; }
-.project-figure .diagram { background: var(--panel); }
-.project-figure figcaption { margin-top: 10px; font-size: 14px; color: var(--muted); }
-.text-link { font-weight: 600; }
-
-.facts { margin: 0; display: flex; flex-direction: column; }
-.facts > div { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 4px 24px; padding: 14px 0; border-top: 1px solid var(--line); }
-.facts > div:first-child { border-top: 0; padding-top: 4px; }
-.facts-compact { margin-top: 6px; }
-.facts-compact > div { grid-template-columns: 120px minmax(0, 1fr); padding: 11px 0; font-size: 15px; }
-.facts-compact > div:first-child { border-top: 1px solid var(--line); padding-top: 11px; }
-.facts dt { font-weight: 600; color: var(--navy); }
-.facts dd { margin: 0; color: var(--muted); }
+.card-body .status { margin-top: -6px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; font-size: 12.5px; font-weight: 500; }
+.tags li { padding: 3px 9px; border-radius: 4px; background: var(--copper-wash); color: var(--copper-dark); }
+.card-link { margin-top: auto; display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
 
 /* Diagram shapes and text (inline SVG) */
 .dg-box { fill: #FFFFFF; stroke: #B9C3D0; stroke-width: 1.5; }
@@ -127,6 +118,7 @@ p { text-wrap: pretty; }
 .dg-arrow { fill: var(--copper); }
 .dg-port { fill: #C3CCD8; }
 .dg-led { fill: var(--copper); }
+.dg-lang { fill: var(--copper); }
 
 /* Case study */
 .case { padding-top: 40px; padding-bottom: 40px; }
@@ -175,24 +167,21 @@ p { text-wrap: pretty; }
 
 /* Smaller screens */
 @media (max-width: 900px) {
-  .project, .case-panel, .about, .contact-main { grid-template-columns: minmax(0, 1fr); }
+  .cards, .case-panel, .about, .contact-main { grid-template-columns: minmax(0, 1fr); }
   .brand-role { display: none; }
-  .project { gap: 28px; }
   .about { gap: 40px; }
 }
 @media (max-width: 560px) {
   body { font-size: 15.5px; }
   .hero { padding-top: 32px; padding-bottom: 64px; }
-  .facts-compact > div { grid-template-columns: minmax(0, 1fr); }
+
   .hero-lede { font-size: 16.5px; }
   .work { padding-top: 64px; }
-  .project { padding: 36px 0; }
-  .facts > div { grid-template-columns: minmax(0, 1fr); }
   .about { padding-top: 64px; padding-bottom: 72px; }
   .nav-links { gap: 16px; }
   .nav-links li:nth-child(2) { display: none; }
   .brand-mark { width: 30px; height: 30px; font-size: 12px; }
   .brand-name { font-size: 17px; }
   .nav-links .nav-cv .hint { display: none; }
-  .project-figure figcaption::after { content: " Swipe sideways to see the whole diagram."; }
+  .card-figure::after { content: "Swipe sideways to see the whole diagram."; display: block; padding: 8px 16px 10px; font-size: 13px; color: var(--muted); }
 }
