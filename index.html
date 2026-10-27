@@ -45,30 +45,6 @@
       </div>
     </div>
 
-    <figure class="hero-figure">
-      <div class="diagram" tabindex="0" role="group" aria-label="Home network diagram, scrollable on small screens">
-        <svg viewBox="0 0 640 360" role="img" aria-label="My home network: 2.3 gigabit full fibre over PPPoE into a UniFi UDR7 gateway, which serves a main LAN with a NAS running Docker and Nginx Proxy Manager, an isolated IoT VLAN with its own SSID, and a WireGuard split-tunnel VPN for selected devices.">
-          <rect class="dg-box" x="220" y="16" width="200" height="56" rx="6"/>
-          <text class="dg-t" x="236" y="40">Internet</text><text class="dg-s" x="236" y="60">2.3 Gbps fibre · PPPoE</text>
-          <path class="dg-line-accent" d="M320 72 V104"/>
-          <rect class="dg-box-navy" x="210" y="104" width="220" height="56" rx="6"/>
-          <text class="dg-w" x="226" y="128">UniFi gateway</text><text class="dg-ws" x="226" y="148">UDR7 · PoE switching</text>
-          <path class="dg-line-accent" d="M260 160 V186 H120 V206"/>
-          <path class="dg-line-accent" d="M320 160 V206"/>
-          <path class="dg-line-accent" d="M380 160 V186 H520 V206"/>
-          <rect class="dg-box" x="24" y="206" width="192" height="56" rx="6"/>
-          <text class="dg-t" x="40" y="230">Main LAN</text><text class="dg-s" x="40" y="250">PCs · APs · NAS</text>
-          <rect class="dg-box-accent" x="224" y="206" width="192" height="56" rx="6"/>
-          <text class="dg-t" x="240" y="230">WireGuard VPN</text><text class="dg-s" x="240" y="250">split tunnel</text>
-          <rect class="dg-box" x="424" y="206" width="192" height="56" rx="6"/>
-          <text class="dg-t" x="440" y="230">IoT VLAN</text><text class="dg-s" x="440" y="250">own SSID · isolated</text>
-          <path class="dg-line" d="M120 262 V286"/>
-          <rect class="dg-box" x="24" y="286" width="300" height="56" rx="6"/>
-          <text class="dg-t" x="40" y="310">NAS · Docker Compose</text><text class="dg-s" x="40" y="330">Nginx Proxy Manager · HTTPS</text>
-        </svg>
-      </div>
-      <figcaption>My home network as it runs today. Addresses and network names left out on purpose.</figcaption>
-    </figure>
   </div>
 </header>
 
@@ -120,16 +96,40 @@
       <div class="project-text">
         <h3>Home network and self-hosted services</h3>
         <p class="status">Running · home</p>
-        <p>The network in the diagram at the top of this page. It's where I learn things before I use them for the Scouts.</p>
+        <p>It's where I learn things before I use them for the Scouts.</p>
         <!-- Slot: add a UniFi topology screenshot or a sanitised docker-compose excerpt here. -->
+        <dl class="facts facts-compact">
+          <div><dt>Connection</dt><dd>2.3 Gbps full fibre over PPPoE</dd></div>
+          <div><dt>Gateway</dt><dd>UniFi UDR7 with managed PoE switching and two access points</dd></div>
+          <div><dt>Segmentation</dt><dd>IoT devices on their own VLAN and SSID, isolated from the main LAN</dd></div>
+          <div><dt>Services</dt><dd>Web apps and media services in Docker Compose on a NAS, published through Nginx Proxy Manager with HTTPS certificates</dd></div>
+          <div><dt>VPN</dt><dd>WireGuard, split-tunnelled so only selected devices use it</dd></div>
+        </dl>
       </div>
-      <dl class="facts">
-        <div><dt>Connection</dt><dd>2.3 Gbps full fibre over PPPoE</dd></div>
-        <div><dt>Gateway</dt><dd>UniFi UDR7 with managed PoE switching and two access points</dd></div>
-        <div><dt>Segmentation</dt><dd>IoT devices on their own VLAN and SSID, isolated from the main LAN</dd></div>
-        <div><dt>Services</dt><dd>Web apps and media services in Docker Compose on a NAS, published through Nginx Proxy Manager with HTTPS certificates</dd></div>
-        <div><dt>VPN</dt><dd>WireGuard, split-tunnelled so only selected devices use it</dd></div>
-      </dl>
+    <figure class="project-figure">
+      <div class="diagram" tabindex="0" role="group" aria-label="Home network diagram, scrollable on small screens">
+      <svg viewBox="0 0 640 360" role="img" aria-label="My home network: 2.3 gigabit full fibre over PPPoE into a UniFi UDR7 gateway, which serves a main LAN with a NAS running Docker and Nginx Proxy Manager, an isolated IoT VLAN with its own SSID, and a WireGuard split-tunnel VPN for selected devices.">
+        <rect class="dg-box" x="220" y="16" width="200" height="56" rx="6"/>
+        <text class="dg-t" x="236" y="40">Internet</text><text class="dg-s" x="236" y="60">2.3 Gbps fibre · PPPoE</text>
+        <path class="dg-line-accent" d="M320 72 V104"/>
+        <rect class="dg-box-navy" x="210" y="104" width="220" height="56" rx="6"/>
+        <text class="dg-w" x="226" y="128">UniFi gateway</text><text class="dg-ws" x="226" y="148">UDR7 · PoE switching</text>
+        <path class="dg-line-accent" d="M260 160 V186 H120 V206"/>
+        <path class="dg-line-accent" d="M320 160 V206"/>
+        <path class="dg-line-accent" d="M380 160 V186 H520 V206"/>
+        <rect class="dg-box" x="24" y="206" width="192" height="56" rx="6"/>
+        <text class="dg-t" x="40" y="230">Main LAN</text><text class="dg-s" x="40" y="250">PCs · APs · NAS</text>
+        <rect class="dg-box-accent" x="224" y="206" width="192" height="56" rx="6"/>
+        <text class="dg-t" x="240" y="230">WireGuard VPN</text><text class="dg-s" x="240" y="250">split tunnel</text>
+        <rect class="dg-box" x="424" y="206" width="192" height="56" rx="6"/>
+        <text class="dg-t" x="440" y="230">IoT VLAN</text><text class="dg-s" x="440" y="250">own SSID · isolated</text>
+        <path class="dg-line" d="M120 262 V286"/>
+        <rect class="dg-box" x="24" y="286" width="300" height="56" rx="6"/>
+        <text class="dg-t" x="40" y="310">NAS · Docker Compose</text><text class="dg-s" x="40" y="330">Nginx Proxy Manager · HTTPS</text>
+      </svg>
+      </div>
+      <figcaption>My home network as it runs today. Addresses and network names left out on purpose.</figcaption>
+    </figure>
     </article>
 
     <article class="project">
