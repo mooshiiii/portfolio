@@ -24,15 +24,23 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="site-header" id="top">
+<div class="topbar" id="top">
   <nav class="nav wrap" aria-label="Main">
-    <a class="brand" href="#top">Graham Reid</a>
+    <a class="brand" href="#top" aria-label="Graham Reid, back to top">
+      <span class="brand-mark" aria-hidden="true">GR</span>
+      <span class="brand-name">Graham Reid</span>
+      <span class="brand-role">Network &amp; Infrastructure</span>
+    </a>
     <ul class="nav-links">
       <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="cv/Graham-Reid-CV.pdf">CV <span class="hint">(PDF)</span></a></li>
+      <li><a class="nav-cv" href="cv/Graham-Reid-CV.pdf">CV <span class="hint">(PDF)</span></a></li>
     </ul>
   </nav>
+</div>
+
+<header class="site-header">
 
   <div class="hero wrap">
     <div class="hero-copy">

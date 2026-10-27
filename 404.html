@@ -9,15 +9,22 @@
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-<header class="site-header">
+<div class="topbar">
   <nav class="nav wrap" aria-label="Main">
-    <a class="brand" href="/">Graham Reid</a>
+    <a class="brand" href="/" aria-label="Graham Reid, homepage">
+      <span class="brand-mark" aria-hidden="true">GR</span>
+      <span class="brand-name">Graham Reid</span>
+      <span class="brand-role">Network &amp; Infrastructure</span>
+    </a>
     <ul class="nav-links">
       <li><a href="/#work">Work</a></li>
+      <li><a href="/#about">About</a></li>
       <li><a href="/#contact">Contact</a></li>
-      <li><a href="/cv/Graham-Reid-CV.pdf">CV <span class="hint">(PDF)</span></a></li>
+      <li><a class="nav-cv" href="/cv/Graham-Reid-CV.pdf">CV <span class="hint">(PDF)</span></a></li>
     </ul>
   </nav>
+</div>
+<header class="site-header">
   <div class="wrap notfound">
     <h1>No route to that page.</h1>
     <p class="hero-lede">The link may be old or mistyped. Everything on this site is on the homepage.</p>
