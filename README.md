@@ -2,7 +2,7 @@
 
 Personal portfolio for Graham Reid: network and infrastructure projects, CV and contact.
 
-Plain static HTML and CSS. No build step and no trackers. The only JavaScript is `assets/contact.js`, which reveals the email address on click so harvesters can't read it from the page source. To change the address, base64-encode it (`printf '%s' 'you@example.com' | base64`) and put the result in the button's `data-email` attribute in `index.html`.
+Plain static HTML and CSS. No build step and no trackers. The only JavaScript is `assets/contact.js`, which builds the "Email me" and "Copy email address" buttons. The address is never shown on the page or written in the HTML, so harvesters can't read it. To change the address, base64-encode it (`printf '%s' 'you@example.com' | base64`) and put the result in the button's `data-email` attribute in `index.html`.
 
 ## Structure
 
